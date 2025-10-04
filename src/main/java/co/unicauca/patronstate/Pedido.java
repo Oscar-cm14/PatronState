@@ -13,7 +13,7 @@ public class Pedido {
         this.cliente = cliente;
         this.producto = producto;
         this.total = total;
-        this.estado = new NoEnviado(); // Estado inicial
+        this.estado = new NoEnviado(); 
     }
 
     // Métodos que delegan al estado actual
@@ -37,7 +37,6 @@ public class Pedido {
         estado.cancelar(this);
     }
 
-    // Getters y Setters
     public void setEstado(EstadoPedido estado) {
         this.estado = estado;
         System.out.println("Estado cambiado a: " + estado.getNombreEstado());
